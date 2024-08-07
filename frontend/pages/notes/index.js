@@ -28,7 +28,7 @@ const Notes = () => {
   async function getNotes() {
     try {
       console.log(localStorage.getItem("email"))
-      const url = `http://localhost:8080/api/notes/fetch/${localStorage.getItem("email")}`;
+      const url = `https://rgb-hack.vercel.app/api/notes/fetch/${localStorage.getItem("email")}`;
       console.log("Fetching from URL:", url);
       const response = await fetch(url, {
         method: "GET",
@@ -60,7 +60,7 @@ const Notes = () => {
     ev.preventDefault();
     console.log(localStorage.getItem("email"))
     console.log(localStorage.getItem("token")) 
-    const url = `http://localhost:8080/api/notes/create/${localStorage.getItem("email")}`;
+    const url = `https://rgb-hack.vercel.app/api/notes/create/${localStorage.getItem("email")}`;
 
     fetch(url, {
       method: "POST",
@@ -91,7 +91,7 @@ const Notes = () => {
   };
 
   const deleteNote = (id) => {
-    fetch(`http://localhost:8080/api/notes/delete/${id}`, {
+    fetch(`https://rgb-hack.vercel.app/api/notes/delete/${id}`, {
       method: "DELETE",
       headers: { 
         "Authorization": `${localStorage.getItem("token")}`,
@@ -107,7 +107,7 @@ const Notes = () => {
   const handleDragEnd = (id, newPosition) => {
     console.log(localStorage.getItem("token"))
     console.log(newPosition)
-    fetch(`http://localhost:8080/api/notes/updatePosition/${id}`, {
+    fetch(`https://rgb-hack.vercel.app/api/notes/updatePosition/${id}`, {
       method: "PUT",
       headers: {
         "Authorization": `${localStorage.getItem("token")}`,
@@ -129,7 +129,7 @@ const Notes = () => {
 
   const updateNote = (changedNote) => {
     console.log("Updating note:", changedNote);
-    fetch(`http://localhost:8080/api/notes/updateContent/${changedNote.id}`, {
+    fetch(`https://rgb-hack.vercel.app/api/notes/updateContent/${changedNote.id}`, {
       method: "PUT",
       headers: {
         "Authorization": `${localStorage.getItem("token")}`,
