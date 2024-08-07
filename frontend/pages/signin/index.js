@@ -93,7 +93,6 @@ const SignIn = () => {
               type="button"
               className="w-full p-2 mx-1 rounded-full bg-white border border-gray-300 text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-blue-200"
               aria-label="Sign in with Google"
-              onClick={handleGoogle}
             >
               <FaGoogle className="mx-auto" />
             </button>
