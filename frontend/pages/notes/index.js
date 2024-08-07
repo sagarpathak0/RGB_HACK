@@ -5,8 +5,22 @@ import { FaPlus } from "react-icons/fa";
 import Draggable from "react-draggable";
 
 const Notes = () => {
-  const groups = ["Group 1", "Group 2", "Group 3", "Group 4", "Mathematics", "Physics", "Chemistry", "Computer Science"];
-  const colors = ["#ffadad", "#ffd6a5", "#fdffb6", "#caffbf", "#9bf6ff", "#a0c4ff", "#bdb2ff", "#ffc6ff"];
+  const groups = [
+    "Mathematics",
+    "Physics",
+    "Chemistry",
+    "Computer Science",
+  ];
+  const colors = [
+    "Pink",
+    "Cream",
+    "Lime Green",
+    "Parrot Green",
+    "Sky Blue",
+    "Azure",
+    "Lilac",
+    "Pink",
+  ];
 
   const [notes, setNotes] = useState([]);
   const [newNoteTitle, setNewNoteTitle] = useState("");
