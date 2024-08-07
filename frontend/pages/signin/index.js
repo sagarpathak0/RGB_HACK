@@ -17,7 +17,7 @@ const SignIn = () => {
     e.preventDefault();
     try {
       // Redirect the user to the Google authentication URL
-      window.location.href = "http://localhost:8080/api/auth/google";
+      window.location.href = "https://rgb-hack.vercel.app/api/auth/google";
     } catch (error) {
       console.error("Google sign-in error:", error);
       setError("Google sign-in failed. Please try again.");
@@ -34,7 +34,7 @@ const SignIn = () => {
       return(setError("Email and password are required"));
     }
     try{
-      const url = "http://localhost:8080/api/auth/login"
+      const url = "https://rgb-hack.vercel.app/api/auth/login"
       const response = await fetch(url,{
         method: "POST",
         headers: {
